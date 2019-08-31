@@ -5,8 +5,10 @@ namespace csharp
 {
     class SocketMerchant
     {
-        public int SocketMerchantMethod(int[] ar)
+        public int SocketMerchantMethod()
         {
+
+            int[] ar = { 10, 20, 20, 10, 10, 30, 50, 10, 20, 11 };
             int[] uniqueSocks = ar.Distinct().ToArray();
 
             // check for every element from array without duplicates
@@ -22,7 +24,7 @@ namespace csharp
                         counter++;
                     }
                 }
-                matchingPairs += counter % 2;
+                matchingPairs += counter / 2;
             }
 
             return matchingPairs;

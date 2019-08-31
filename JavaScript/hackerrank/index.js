@@ -1,5 +1,6 @@
-console.log('hackerrank');
+// Sock Merchant
+function sockMerchant(n, ar) {
 
-for (i = 0; i < 5; i++) {
-    console.log('hackerrank');
+
 }
+
