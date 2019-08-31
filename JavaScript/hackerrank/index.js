@@ -1,4 +1,6 @@
-// Sock Merchant
+//#region Warm-up Challenges
+
+//#region Sock Merchant
 function sockMerchant(n, ar) {
 
     const uniqueSocks = [...new Set(ar)];
@@ -17,6 +19,11 @@ function sockMerchant(n, ar) {
     console.log(matchingPairs);
 
 }
+sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]);
+//#endregion
 
-sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])
+//#region Counting Valleys
 
+//#endregion
+
+//#endregion
