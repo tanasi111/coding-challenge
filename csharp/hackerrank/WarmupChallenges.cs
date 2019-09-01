@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace csharp
@@ -25,6 +26,34 @@ namespace csharp
                 matchingPairs += counter / 2;
             }
             return matchingPairs;
+        }
+
+        public int CountingValleys()
+        {
+            string s = "UDDDUDUU";
+            int altitude = 0;
+            bool goingDownhill = false;
+            List<int> valeys = new List<int>();
+            foreach (char c in s)
+            {
+                if (c == 'U')
+                {
+                    // moment when Gary start to go up from bottom of valey
+                    if (goingDownhill && altitude < 0)
+                    {
+                        valeys.Add(altitude);
+                    }
+
+                    altitude++;
+                    goingDownhill = false;
+                }
+                else
+                {
+                    altitude--;
+                    goingDownhill = true;
+                }
+            }
+            return valeys.Distinct().ToList().Count;
         }
     }
 }
