@@ -30,30 +30,34 @@ namespace csharp
 
         public int CountingValleys()
         {
-            string s = "UDDDUDUU";
+            // string s = "UDDDUDUU";
+            string s = "DDUUDDUDUUUD";
             int altitude = 0;
             bool goingDownhill = false;
+            int consecutiveStepsDwonhill = 0;
             List<int> valeys = new List<int>();
+
             foreach (char c in s)
             {
                 if (c == 'U')
                 {
                     // moment when Gary start to go up from bottom of valey
-                    if (goingDownhill && altitude < 0)
+                    if (goingDownhill && altitude < 0 && consecutiveStepsDwonhill > 1)
                     {
                         valeys.Add(altitude);
                     }
-
                     altitude++;
+                    consecutiveStepsDwonhill = 0;
                     goingDownhill = false;
                 }
                 else
                 {
                     altitude--;
+                    consecutiveStepsDwonhill++;
                     goingDownhill = true;
                 }
             }
-            return valeys.Distinct().ToList().Count;
+            return valeys.Count;
         }
     }
 }
