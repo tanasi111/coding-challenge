@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace csharp
 {
-    class SocketMerchant
+    class WarmupChallenges
     {
-        public int SocketMerchantMethod()
+        public int SocketMerchant()
         {
 
             int[] ar = { 10, 20, 20, 10, 10, 30, 50, 10, 20, 11 };

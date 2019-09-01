@@ -8,10 +8,14 @@ namespace csharp
         {
             Console.WriteLine("Hello World!");
 
-            #region hackerrank
+            #region HackerRank
 
-            SocketMerchant res = new SocketMerchant();
-            Console.WriteLine("Matching pairs of socks is " + res.SocketMerchantMethod());
+            #region Warm-up Challenges
+
+            WarmupChallenges warmupChallenges = new WarmupChallenges();
+            Console.WriteLine("Matching pairs of socks is " + warmupChallenges.SocketMerchant());
+
+            #endregion
 
             #endregion
         }
