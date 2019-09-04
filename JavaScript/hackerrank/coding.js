@@ -60,7 +60,7 @@ function longestSubsequence(x, y) {
                 } else {
                     subsequence = x.slice(0, j) + x.slice(j + i, x.length);
                 }
-                if (subsequence === y) {
+                if (y.includes(subsequence)) {
                     console.log("subsequence of string x is " + subsequence);
                     return subsequence.length;
                 }
