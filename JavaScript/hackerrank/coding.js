@@ -51,13 +51,22 @@ function longestSubsequence(x, y) {
         return subsequence.length;
     }
     else {
-
+        // i is length to trim. that why i start with number 1
         for (let i = 1; i <= x.length - 1; i++) {
-            for (let j = x.length - 1; j >= 1; j--) {
-
+            // j is position from where to trim
+            for (let j = 0; j <= x.length - i; j++) {
+                if (j === 0) {
+                    subsequence = x.slice(j + i, x.length);
+                } else {
+                    subsequence = x.slice(0, j) + x.slice(j + i, x.length);
+                }
+                if (subsequence === y) {
+                    console.log("subsequence of string x is " + subsequence);
+                    return subsequence.length;
+                }
+                console.log(subsequence);
             }
         }
-
     }
 
 }
