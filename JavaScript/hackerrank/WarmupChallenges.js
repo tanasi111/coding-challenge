@@ -26,4 +26,19 @@ sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]);
 
 //#endregion
 
+//#region Simple Array Sum
+
+function simpleArraySum(ar) {
+
+    let sum = 0;
+    ar.forEach(function (a) {
+        sum += a;
+    });
+    return sum;
+
+}
+
+//#endregion
+
+
 //#endregion
