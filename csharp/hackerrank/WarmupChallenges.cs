@@ -33,31 +33,32 @@ namespace csharp
             // string s = "UDDDUDUU";
             string s = "DDUUDDUDUUUD";
             int altitude = 0;
-            bool goingDownhill = false;
-            int consecutiveStepsDwonhill = 0;
-            List<int> valeys = new List<int>();
+            bool comingFromValley = false;
+            int numOfValeys = 0;
 
             foreach (char c in s)
             {
                 if (c == 'U')
                 {
-                    // moment when Gary start to go up from bottom of valey
-                    if (goingDownhill && altitude < 0 && consecutiveStepsDwonhill > 1)
-                    {
-                        valeys.Add(altitude);
-                    }
                     altitude++;
-                    consecutiveStepsDwonhill = 0;
-                    goingDownhill = false;
+                    // moment when Gary step up from a valley
+                    if (altitude == 0 && comingFromValley)
+                    {
+                        numOfValeys++;
+                        comingFromValley = false;
+                    }
+
                 }
                 else
                 {
                     altitude--;
-                    consecutiveStepsDwonhill++;
-                    goingDownhill = true;
+                    if (altitude <= 2)
+                    {
+                        comingFromValley = true;
+                    }
                 }
             }
-            return valeys.Count;
+            return numOfValeys;
         }
     }
 }
