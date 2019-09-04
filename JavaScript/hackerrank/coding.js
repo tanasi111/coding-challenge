@@ -39,25 +39,26 @@ function longestSubsequence(x, y) {
     // Write your code here
     let lonSub = '';
 
-    // 1. first generate all subsequence of string x
-    // start with whole string and then removing first one char from first to last position
-    // than two chars until only letters reamins
-    let xSubsequenceList = [];
-    xSubsequenceList.push(x);
+    // find subsequence of string x
+    // start with whole string and then removing one char from first to last position
+    // than two chars until only letters reamins. 
+    // every time compare current subsequence of string x if it is substring of y
 
-    for (let i = 1; i <= x.length - 1; i++) {
-        for (let j = x.length - 1; j >= 1; j--) {
+    let subsequence = x;
+    console.log(subsequence);
 
-        }
+    if (y.includes(subsequence)) {
+        return subsequence.length;
     }
+    else {
 
+        for (let i = 1; i <= x.length - 1; i++) {
+            for (let j = x.length - 1; j >= 1; j--) {
 
-    // 2. sort subsequence list of string x from longest to shortest
+            }
+        }
 
-    // 3. return fist find subsequence.length
-
-
-    console.log(xSubsequenceList);
+    }
 
 }
 let x = 'hackerranks';
