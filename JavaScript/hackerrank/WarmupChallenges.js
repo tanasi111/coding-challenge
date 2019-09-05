@@ -19,7 +19,7 @@ function sockMerchant(n, ar) {
     console.log(matchingPairs);
 
 }
-sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]);
+// sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]);
 //#endregion
 
 //#region Counting Valleys
@@ -40,5 +40,29 @@ function simpleArraySum(ar) {
 
 //#endregion
 
+//#region Electronics Shop
+
+function getMoneySpent(keyboards, drives, b) {
+
+    let maxTotalPrile = -1;
+
+    keyboards.forEach(function (keyboard) {
+        drives.forEach(function (drive) {
+            let price = keyboard + drive;
+            if (price === b) {
+                maxTotalPrile = price;
+                return;
+            }
+            if (price < b && price > maxTotalPrile) {
+                maxTotalPrile = price;
+            }
+        });
+    });
+    return maxTotalPrile;
+
+}
+console.log('Max total price is ' + getMoneySpent([3, 1], [5, 2, 8], 9));
+
+//#endregion
 
 //#endregion
