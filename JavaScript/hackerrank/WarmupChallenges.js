@@ -75,7 +75,7 @@ function pageCount(n, p) {
     if (p == 1 || p == n || (((n % 2) != 0) && n - p == 1)) {
         turnedPage = 0;
     } else {
-        if (p < halfBook) {
+        if (p <= halfBook) {
             turnedPage = Math.floor(p / 2);
         } else {
             turnedPage = Math.floor((n - p) / 2);
