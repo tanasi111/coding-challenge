@@ -61,8 +61,30 @@ function getMoneySpent(keyboards, drives, b) {
     return maxTotalPrice;
 
 }
-console.log('Max total price is ' + getMoneySpent([3, 1], [5, 2, 8], 9));
+// console.log('Max total price is ' + getMoneySpent([3, 1], [5, 2, 8], 9));
 
+//#endregion
+
+//#region Drawing Book
+
+function pageCount(n, p) {
+
+    let halfBook = Math.floor(n / 2);
+    let turnedPage = 0;
+
+    if (p == 1 || p == n || (((n % 2) != 0) && n - p == 1)) {
+        turnedPage = 0;
+    } else {
+        if (p < halfBook) {
+            turnedPage = Math.floor(p / 2);
+        } else {
+            turnedPage = Math.floor((n - p) / 2);
+        }
+    }
+
+    return turnedPage;
+}
+console.log('number of pages Brie turned ' + pageCount(6, 2));
 //#endregion
 
 //#endregion
