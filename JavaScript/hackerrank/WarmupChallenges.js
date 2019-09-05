@@ -44,21 +44,21 @@ function simpleArraySum(ar) {
 
 function getMoneySpent(keyboards, drives, b) {
 
-    let maxTotalPrile = -1;
+    let maxTotalPrice = -1;
 
     keyboards.forEach(function (keyboard) {
         drives.forEach(function (drive) {
             let price = keyboard + drive;
             if (price === b) {
-                maxTotalPrile = price;
+                maxTotalPrice = price;
                 return;
             }
-            if (price < b && price > maxTotalPrile) {
-                maxTotalPrile = price;
+            if (price < b && price > maxTotalPrice) {
+                maxTotalPrice = price;
             }
         });
     });
-    return maxTotalPrile;
+    return maxTotalPrice;
 
 }
 console.log('Max total price is ' + getMoneySpent([3, 1], [5, 2, 8], 9));
