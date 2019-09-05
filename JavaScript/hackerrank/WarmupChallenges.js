@@ -69,22 +69,18 @@ function getMoneySpent(keyboards, drives, b) {
 
 function pageCount(n, p) {
 
-    let halfBook = Math.floor(n / 2);
-    let turnedPage = 0;
-
-    if (p == 1 || p == n || (((n % 2) != 0) && n - p == 1)) {
-        turnedPage = 0;
-    } else {
-        if (p <= halfBook) {
-            turnedPage = Math.floor(p / 2);
-        } else {
-            turnedPage = Math.floor((n - p) / 2);
-        }
+    let total = Math.floor(n / 2);
+    let right = Math.floor(p / 2);
+    let left = total - right;
+    if (right < left) {
+        return right;
+    }
+    else {
+        return left;
     }
 
-    return turnedPage;
 }
-console.log('number of pages Brie turned ' + pageCount(6, 2));
+console.log('number of pages Brie turned ' + pageCount(63, 61));
 //#endregion
 
 //#endregion
