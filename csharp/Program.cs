@@ -32,7 +32,7 @@ namespace csharp
 
             CodilityLessons codilityLessons = new CodilityLessons();
 
-            int i = codilityLessons.BinaryGap(1041);
+            Console.WriteLine("Longest binary gap is " + codilityLessons.BinaryGap(1041));
 
             #endregion
 
