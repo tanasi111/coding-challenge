@@ -8,6 +8,7 @@ namespace csharp
         {
             // Console.WriteLine("Hello World!");
 
+            // HackerRank
             #region HackerRank
 
             #region Warm-up Challenges
@@ -16,8 +17,22 @@ namespace csharp
 
             // Console.WriteLine("Matching pairs of socks is " + warmupChallenges.SocketMerchant());
 
-            Console.WriteLine("Number of valleys Gary walked through during his hike is " +
-                warmupChallenges.CountingValleys());
+            // Console.WriteLine("Number of valleys Gary walked through during his hike is " +
+            //     warmupChallenges.CountingValleys());
+
+            #endregion
+
+            #endregion
+
+
+            // Codility
+            #region Codility
+
+            #region Lessons
+
+            CodilityLessons codilityLessons = new CodilityLessons();
+
+            int i = codilityLessons.BinaryGap(1041);
 
             #endregion
 
