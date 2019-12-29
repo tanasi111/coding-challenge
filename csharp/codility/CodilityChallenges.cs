@@ -7,9 +7,29 @@ namespace csharp
     class CodilityChallenges
     {
         #region AP
-        public int Test(int N)
+        public int solution(int[] X, int[] Y)
         {
-            return N;
+            int[] distincX = X.Distinct().ToArray();
+            Array.Sort(distincX);
+
+            int widestVerticalPath = 1;
+            int index = 0;
+            int previousX = 0;
+            foreach (int x in distincX)
+            {
+                if (index != 0)
+                {
+                    int verticalPath = x - previousX;
+                    if (widestVerticalPath < verticalPath)
+                    {
+                        widestVerticalPath = verticalPath;
+                    }
+                }
+                previousX = x;
+                index++;
+            }
+
+            return widestVerticalPath;
         }
 
         #endregion

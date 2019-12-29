@@ -31,7 +31,10 @@ namespace csharp
             #region Challenges
 
             CodilityChallenges codilityChallenges = new CodilityChallenges();
-            Console.WriteLine(codilityChallenges.Test(5));
+
+            int[] X = new int[] { 1, 8, 7, 3, 4, 1, 8 };
+            int[] Y = new int[] { 6, 4, 1, 8, 5, 1, 7 };
+            Console.WriteLine(codilityChallenges.solution(X, Y));
 
             #endregion
 
