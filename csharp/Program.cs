@@ -28,11 +28,17 @@ namespace csharp
             // Codility
             #region Codility
 
+            #region Challenges
+
+            CodilityChallenges codilityChallenges = new CodilityChallenges();
+            Console.WriteLine(codilityChallenges.Test(5));
+
+            #endregion
+
             #region Lessons
 
             CodilityLessons codilityLessons = new CodilityLessons();
-
-            Console.WriteLine("Longest binary gap is " + codilityLessons.BinaryGap(1041));
+            // Console.WriteLine("Longest binary gap is " + codilityLessons.BinaryGap(1041));
 
             #endregion
 
