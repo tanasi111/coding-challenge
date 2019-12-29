@@ -6,7 +6,7 @@ namespace csharp
 {
     class CodilityChallenges
     {
-        #region AP
+        #region Random
         public int solution(int[] X, int[] Y)
         {
             int[] distincX = X.Distinct().ToArray();
